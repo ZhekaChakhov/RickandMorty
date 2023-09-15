@@ -14,7 +14,7 @@
         <NuxtLink
           :to="`${i}`"
           href="#"
-          :class="['regular', { active: i === 1 }]">
+          :class="['regular', { active: pages === i }]">
           {{i}}
         </NuxtLink>
       </nav>
@@ -24,7 +24,7 @@
 
 <script setup>
 import { onMounted, computed } from "vue";
-import { useCharacterStore } from "~/stores/CharacterStore";
+import { usePagesStore } from "~/stores/PagesStore";
 
 const arr = [];
 
@@ -32,14 +32,15 @@ for (let j = 1; j < 43; j++) {
   arr.push(j)
 }
 
-const characterStore = useCharacterStore();
+const { pages } = useRoute().params;
+
+const pagesStore = usePagesStore();
 
 const characters = computed(() => {
-  return characterStore.characters;
+  return pagesStore.characters;
 });
-
 onMounted(() => {
-  characterStore.fetchCharacters();
+  pagesStore.fetchCharacters(pages);
 });
 
 </script>
