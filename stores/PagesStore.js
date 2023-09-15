@@ -12,7 +12,7 @@ export const usePagesStore = defineStore("pagesStore", {
 			try {
 				const data = await axios.get(url + id);
 				this.characters = data.data.results;
-				console.log(data.data.results);
+				// console.log(data.data.results);
 			} catch (error) {
 				alert(error);
 				console.log(error);

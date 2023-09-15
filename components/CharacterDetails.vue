@@ -5,7 +5,9 @@
         <img :src="`${character.image}`" class="mx-auto my-7" />
       </div>
       <div class="p-7">
-        <h2 class="text-4xl my-7">{{ character.name }}</h2>
+        <h2 class="text-5xl mt-7 mb-16 text-green-500">{{ character.name }}</h2>
+        <p class="text-3xl mb-3 text-blue-600 font-semiboldbold">Species: {{ character.species }}</p>
+        <p class="text-3xl mb-3 text-blue-600 font-semiboldbold">Location: {{ character.location }}</p>
       </div>
     </div>
   </div>
@@ -13,6 +15,7 @@
 
 <script setup>
   const { character } = defineProps(['character']);
+  // console.log({character});
 </script>
 
 <style scoped>
@@ -20,3 +23,4 @@
     max-width: 400px;
   }
 </style>
+
