@@ -6,13 +6,15 @@ const url = "https://rickandmortyapi.com/api/character/";
 export const useIdStore = defineStore("idStore", {
 	state: () => ({
 		character: {},
+		location: {},
 	}),
 	actions: {
 		async fetchCharacter(id) {
 			try {
 				const data = await axios.get(url + id);
 				this.character = data.data;
-				// console.log(data.data);
+				this.location = data.data.location.name;
+				// console.log(data.data.location.name);
 			} catch (error) {
 				alert(error);
 				console.log(error);

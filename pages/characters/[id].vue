@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CharacterDetails :character="character" />
+    <CharacterDetails :character="character" :location="location" />
   </div>
 </template>
 
@@ -15,6 +15,10 @@ const idStore = useIdStore();
 const character = computed(() => {
   return idStore.character;
 });
+const location = computed(() => {
+  return idStore.location;
+});
+
 onMounted(() => {
   idStore.fetchCharacter(id);
 });

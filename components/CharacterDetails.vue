@@ -7,15 +7,14 @@
       <div class="p-7">
         <h2 class="text-5xl mt-7 mb-16 text-green-500">{{ character.name }}</h2>
         <p class="text-3xl mb-3 text-blue-600 font-semiboldbold">Species: {{ character.species }}</p>
-        <p class="text-3xl mb-3 text-blue-600 font-semiboldbold">Location: {{ character.location }}</p>
+        <p class="text-3xl mb-3 text-blue-600 font-semiboldbold">Location: {{ location }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-  const { character } = defineProps(['character']);
-  // console.log({character});
+  const { character, location } = defineProps(['character', 'location']);
 </script>
 
 <style scoped>
