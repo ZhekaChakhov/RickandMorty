@@ -12,7 +12,7 @@ export const useEpisodeStore = defineStore("episodeStore", {
 			try {
 				const data = await axios.get(url + id);
 				this.episode = data.data;
-				// console.log(data.data);
+				console.log(data.data);
 			} catch (error) {
 				alert(error);
 				console.log(error);

@@ -14,7 +14,7 @@ export const useIdStore = defineStore("idStore", {
 				const data = await axios.get(url + id);
 				this.character = data.data;
 				this.location = data.data.location.name;
-				console.log(data.data);
+				// console.log(data.data);
 			} catch (error) {
 				alert(error);
 				console.log(error);
