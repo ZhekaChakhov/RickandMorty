@@ -13,7 +13,7 @@ export const useIdStore = defineStore("idStore", {
 			try {
 				const data = await axios.get(url + id);
 				this.character = data.data;
-				this.location = data.data.location.name;
+				this.location = data.data.location;
 				// console.log(data.data);
 			} catch (error) {
 				alert(error);

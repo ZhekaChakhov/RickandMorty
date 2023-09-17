@@ -32,15 +32,6 @@ const parseId = (str) => {
   return +num;
 };
 
-let id = [];
-
-for (let item of ep_characters) {
-  let i = parseId(item);
-  id.push(i);
-}
-
-console.log(id.join());
-
 const idStore = useIdStore();
 
 const characters = computed(() => {
@@ -48,6 +39,14 @@ const characters = computed(() => {
 });
 
 onMounted(() => {
+  let id = [];
+
+  for (let item of ep_characters) {
+    let i = parseId(item);
+    id.push(i);
+  }
+
+  id = id.join();
   idStore.fetchCharacter(id);
 });
 </script>

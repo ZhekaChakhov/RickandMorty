@@ -10,7 +10,7 @@
           Species: {{ character.species }}
         </p>
         <p class="text-3xl mb-3 text-blue-600 font-semiboldbold">
-          Location: {{ location }}
+          Location: {{ location.name }}
         </p>
       </div>
     </div>
