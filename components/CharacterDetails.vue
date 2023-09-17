@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-  const { character, location } = defineProps(['character', 'location']);
+const { character, location } = defineProps(['character', 'location']);
 </script>
 
 <style scoped>

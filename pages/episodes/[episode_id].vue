@@ -1,6 +1,6 @@
 <template>
   <div>
-    <EpisodeDetails :episode="episode" />
+    <EpisodeDetails :episode="episode" :ep_characters="ep_characters" />
   </div>
 </template>
 
@@ -14,6 +14,9 @@ const episodeStore = useEpisodeStore();
 
 const episode = computed(() => {
   return episodeStore.episode;
+});
+const ep_characters = computed(() => {
+  return episodeStore.ep_characters;
 });
 
 onMounted(() => {

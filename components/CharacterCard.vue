@@ -29,20 +29,20 @@
 </template>
 
 <script setup>
-  const { character } = defineProps(['character']);
-  const arr = [0,1,2,3,4];
+const { character } = defineProps(['character']);
+const arr = [0,1,2,3,4];
 
-  const parseId = (str) => {
-    let num = "";
+const parseId = (str) => {
+  let num = "";
 
-    for (let i = 0; i < str.length; i++) {
-      if ( !isNaN(str[i])) {
-        num += str[i];
-      }
+  for (let i = 0; i < str.length; i++) {
+    if ( !isNaN(str[i])) {
+      num += str[i];
     }
+  }
 
-    return num;
-  };
+  return num;
+};
 
 </script>
 
