@@ -19,4 +19,7 @@ export const usePagesStore = defineStore("pagesStore", {
 			}
 		},
 	},
+	persist: {
+		storage: persistedState.localStorage,
+	},
 });
