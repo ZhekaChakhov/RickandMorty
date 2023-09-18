@@ -11,7 +11,9 @@
         </p>
         <div class="grid grid-cols-5 gap-6">
           <div v-for="ch of characters">
-            <img :src="`${ch.image}`" class="thumb w-60" />
+            <NuxtLink :to="`/characters/${ch.id}`" :key="ch.id" target="_blank">
+              <img :src="`${ch.image}`" class="thumb w-60" />
+            </NuxtLink>
           </div>
         </div>
       </div>
