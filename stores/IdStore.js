@@ -21,7 +21,5 @@ export const useIdStore = defineStore("idStore", {
 			}
 		},
 	},
-	persist: {
-		storage: persistedState.localStorage,
-	},
+	persist: true,
 });

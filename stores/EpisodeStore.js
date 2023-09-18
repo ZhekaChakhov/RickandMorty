@@ -21,7 +21,5 @@ export const useEpisodeStore = defineStore("episodeStore", {
 			}
 		},
 	},
-	persist: {
-		storage: persistedState.localStorage,
-	},
+	persist: true,
 });
