@@ -13,4 +13,10 @@ body {
   .card {
     @apply p-3 rounded-md bg-white shadow-md h-full;
   }
+
+  @media (max-width: 767px) {
+    html {
+      font-size: 6px;
+    }
+  }
 }
