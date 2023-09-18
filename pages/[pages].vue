@@ -25,7 +25,6 @@
       aria-label="Pagination">
         <NuxtLink
           :to="`${i}`"
-          href="#"
           :class="['regular', { active: pages == i }]">
           {{i}}
         </NuxtLink>

@@ -12,7 +12,6 @@
     </div>
     <footer class="container mx-auto p-4 flex justify-between border-t-2">
       <ul class="flex gap-4 text-2xl">
-        <li><NuxtLink to="/" class="p-3 rounded-md inline-block font-bold">Home</NuxtLink></li>
         <li><NuxtLink to="/" class="p-3 rounded-md inline-block font-bold">Search</NuxtLink></li>
         <li><NuxtLink to="/1" class="p-3 rounded-md inline-block font-bold">All characters</NuxtLink></li>
       </ul>
