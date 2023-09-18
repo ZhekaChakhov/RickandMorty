@@ -9,10 +9,10 @@
         <p class="text-3xl mb-3 text-indigo-700 font-semiboldbold text-center">
           Characters in this episode:
         </p>
-        <div class="grid grid-cols-5 gap-6">
+        <div class="grid grid-cols-4 gap-6">
           <div v-for="ch of characters">
             <NuxtLink :to="`/characters/${ch.id}`" :key="ch.id" target="_blank">
-              <img :src="`${ch.image}`" class="thumb w-60" />
+              <img :src="`${ch.image}`" class="thumb w-40 lg:w-72" />
             </NuxtLink>
           </div>
         </div>
