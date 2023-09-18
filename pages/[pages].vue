@@ -1,12 +1,24 @@
 <template>
   <div>
+    <p class="text-sm text-gray-700">
+      Showing
+      <span class="font-medium">{{ 20 * (+pages - 1) + 1}}</span>
+      to
+      <span class="font-medium" v-if="+pages < 42">{{20 * +pages}}</span>
+      <span class="font-medium" v-else>826</span>
+      of
+      <span class="font-medium">826</span>
+      results
+    </p>
+  </div>
+  <div>
     <div class="grid grid-cols-4 gap-5">
       <div v-for="ch of characters">
         <CharacterCard :character="ch" />
       </div>
     </div>
   </div>
-  <div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+  <div class="border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
     <div>
       <nav v-for="i in arr" 
       class="isolate inline-flex -space-x-px rounded-md shadow-sm"
@@ -14,7 +26,7 @@
         <NuxtLink
           :to="`${i}`"
           href="#"
-          :class="['regular', { active: pages === i }]">
+          :class="['regular', { active: pages == i }]">
           {{i}}
         </NuxtLink>
       </nav>
