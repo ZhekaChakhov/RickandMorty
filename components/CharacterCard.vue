@@ -1,15 +1,15 @@
 <template>
   <div class="card text-center">
-    <img :src="`${character.image}`" class="thumb" />
+    <img :src="`${character.image}`" class="thumb w-72" />
     <NuxtLink :to="`/characters/${character.id}`">
-      <p class="font-bold text-green-500 m-2 truncate text-2xl">{{ character.name }}</p>
+      <p class="font-bold text-green-500 m-1 truncate text-2xl">{{ character.name }}</p>
     </NuxtLink>
-    <p class="font-bold text-gray-500 m-2 truncate text-xl">{{ character.species }}</p>
+    <p class="font-bold text-gray-500 mb-1 truncate text-xl">{{ character.species }}</p>
     <div v-if="character.episode.length >= 5">
       <div v-for="i in arr">
-        <p class="font-bold text-gray-500 m-2 truncate text-xl">
+        <p class="font-bold text-gray-500 mb-1 truncate text-xl">
           <NuxtLink :to="`/episodes/${parseId(character.episode[i])}`">
-            <p class="font-bold text-gray-500 m-2 truncate text-xl">
+            <p class="font-bold text-gray-500 mb-1 truncate text-xl">
               Episode number {{ parseId(character.episode[i]) }}
             </p>
           </NuxtLink>
@@ -19,7 +19,7 @@
     <div v-else>
       <div v-for="ep in character.episode">
         <NuxtLink :to="`/episodes/${parseId(ep)}`">
-            <p class="font-bold text-gray-500 m-2 truncate text-xl">
+            <p class="font-bold text-gray-500 mb-2 truncate text-xl">
               Episode number {{ parseId(ep) }}
             </p>
           </NuxtLink>

@@ -6,9 +6,12 @@
         <p class="text-3xl mb-3 text-blue-600 font-semiboldbold">
           Premier Date: {{ episode.air_date }}
         </p>
-        <div class="grid grid-cols-4 gap-5">
+        <p class="text-3xl mb-3 text-indigo-700 font-semiboldbold text-center">
+          Characters in this episode:
+        </p>
+        <div class="grid grid-cols-5 gap-6">
           <div v-for="ch of characters">
-            <img :src="`${ch.image}`" class="thumb" />
+            <img :src="`${ch.image}`" class="thumb w-60" />
           </div>
         </div>
       </div>
