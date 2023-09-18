@@ -11,8 +11,7 @@
     <CharacterCard
       v-for="character of searchStore.characters"
       :key="character.id"
-      :character="character"
-      :is-search="true" />
+      :character="character"/>
   </div>
 </template>
 
