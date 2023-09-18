@@ -2,7 +2,7 @@
   <div class="card">
     <div class="grid grid-cols-2 gap-10">
       <div class="p-7">
-        <img :src="`${character.image}`" class="mx-auto my-7" />
+        <img :src="`${character.image}`" class="w-48 lg:w-80 mx-auto my-7" />
       </div>
       <div class="p-7">
         <h2 class="text-5xl mt-7 mb-16 text-green-500">{{ character.name }}</h2>
